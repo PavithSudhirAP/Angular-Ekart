@@ -1,1 +1,11 @@
-<p>product-list works!</p>
+<div class="ekart--product--container">
+    <img [src]="product.pImage">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{ product.color }}</p>
+    <p>Discounted Price: {{ getDiscountedPrice() }}</p>
+    <p>{{ product.instock > 0 ? 'only ' + product.instock + ' items left' : 'Out of stock!!' }}</p>
+    <!-- <app-search></app-search> -->
+</div>
+
+<!--Disabled, Hidden, Checked-->
