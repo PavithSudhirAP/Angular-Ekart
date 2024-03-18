@@ -1,10 +1,16 @@
 <div class="ekart--product--container">
-    <img [src]="product.pImage">
+    <!-- <img [src]="product.pImage">
     <p>Name: {{ product.name }}</p>
     <p>Price: {{ '$' + product.price }}</p>
     <p>Color: {{ product.color }}</p>
     <p>Discounted Price: {{ getDiscountedPrice() }}</p>
     <p>{{ product.instock > 0 ? 'only ' + product.instock + ' items left' : 'Out of stock!!' }}</p>
+    <button [disabled]="!(product.instock > 0)" (click)="onPlusButtonClick()"> {{ addToCart == 0 ? 'Buy Now!!' : '+' }}</button>
+    <span [hidden]="!(addToCart > 0)" >{{ 'cart: ' + addToCart }}</span>
+    <button [hidden]="!(addToCart > 0)" (click)="onMinusButtonClick()">-</button> -->
+    <!-- <Input [value]="name" (input)="onNameChange($event)">
+    <p>{{ name }}</p> -->
+
     <!-- <app-search></app-search> -->
 </div>
 

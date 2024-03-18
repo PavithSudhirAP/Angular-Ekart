@@ -9,6 +9,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
+import { SearchComponent } from './product-list/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainMenuComponent } from './header/main-menu/main-menu.component';
     TopHeaderComponent,
     ProductListComponent,
     TopMenuComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

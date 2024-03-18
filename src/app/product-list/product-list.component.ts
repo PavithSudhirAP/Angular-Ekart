@@ -6,16 +6,35 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-product = {
-  name: 'iphone 13',
-  price:  789,
-  color: "Black",
-  discount: 8.5,
-  instock: 5,
-}
+  name = 'John Doe'
+  addToCart: number = 0
+  product = {
+    name: 'iphone 13',
+    price: 789,
+    color: "Black",
+    discount: 8.5,
+    instock: 5,
+    pImage: './assets/images/iphone.png'
+  }
 
-getDiscountedPrice() {
-  return '$' + (this.product.price - (this.product.price * this.product.discount / 100) ).toFixed(2)
-}
+  onAddToCart(event: any) {
+    this.name = event.target.value
+    console.log(event.target.value)
+  }
+
+
+  onPlusButtonClick() {
+    this.addToCart++;
+    this.product.instock--;
+  }
+
+  onMinusButtonClick() {
+    this.addToCart--;
+    this.product.instock++;
+  }
+
+  getDiscountedPrice() {
+    return '$' + (this.product.price - (this.product.price * this.product.discount / 100)).toFixed(2)
+  }
 
 }
